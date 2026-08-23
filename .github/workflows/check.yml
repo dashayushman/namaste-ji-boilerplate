@@ -1,0 +1,16 @@
+name: check
+# Proves the kit without owning any cloud account: typecheck + tests + secret scan + the bootstrap
+# plan (dry run, no network). The first real cloud bootstrap is always run by YOU on YOUR account.
+on: { push: { branches: [main] }, pull_request: {} }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run check
+      - name: bootstrap --dry-run (the plan, offline)
+        run: npm run bootstrap -- --dry-run
+        env: { CLOUDFLARE_API_TOKEN: dry, CLOUDFLARE_ACCOUNT_ID: dry, ALCHEMY_PASSWORD: dry, KARKHANA_NAME: karkhana-ci }

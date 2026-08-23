@@ -1,0 +1,24 @@
+{
+  "name": "daily-card",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "The example agent: writes one card a day with the model configured in KV (Workers AI by default), stores it in D1, serves it over HTTP.",
+  "scripts": {
+    "dev": "node ../../scripts/ensure-wrangler.mjs daily-card && wrangler d1 migrations apply CARDS --env local --local && wrangler dev --env local --port 8788",
+    "deploy": "wrangler deploy --env staging",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@karkhana/agent-kernel": "*",
+    "@karkhana/config": "*",
+    "ai": "^6.0.0",
+    "hono": "^4.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^4.0.0"
+  }
+}

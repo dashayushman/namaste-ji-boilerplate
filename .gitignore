@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+# secrets — never committed (CI fails if any of these is tracked)
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+.mcp.json
+*.pem
+*.key
+secrets/
+# local state
+.wrangler/
+.wrangler-state/
+.alchemy/
+infra/.outputs.json

@@ -1,0 +1,22 @@
+{
+  "name": "karkhana",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "An agent-operated app on Cloudflare — a workshop built for coding agents.",
+  "workspaces": ["packages/*", "agents/*", "infra"],
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "dev": "npm --workspace=agents/daily-card run dev",
+    "new:agent": "node scripts/new-agent.mjs",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "ai": "^6.0.0" },
+  "overrides": { "ai": "^6.0.0" },
+  "devDependencies": { "wrangler": "^4.0.0", "typescript": "^5.4.5" }
+}
