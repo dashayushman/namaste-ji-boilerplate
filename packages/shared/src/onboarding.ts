@@ -10,7 +10,7 @@
  * (± language, ± deity, ± geo) are just presence/absence here.
  *
  * Even a skipped-everything user is not a blank slate: country, device locale and signup time
- * are always on, and `coldStartVector()` (in @karkhana/feed) turns them into the context
+ * are always on, and `coldStartVector()` (in @namaste-ji/feed) turns them into the context
  * floor (DS-12).
  */
 import { z } from 'zod';

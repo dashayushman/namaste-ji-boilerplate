@@ -1,5 +1,5 @@
 /**
- * @karkhana/config
+ * @namaste-ji/config
  *
  * KV-backed runtime config for all agents and services.
  *
@@ -306,7 +306,7 @@ export const EVENTS_CALENDAR_DEFAULTS: EventsCalendarConfig = {
   provider: 'openai',
   model_id: 'gpt-5.4-mini', // cheap fallback (local); staging KV overrides to gpt-5.5
   byok: true,
-  byok_alias: 'karkhana-openai',
+  byok_alias: 'namaste-ji-openai',
   openai_api: 'responses', // reasoning_effort + verbosity + tool-calling on gpt-5*
   params: { provider_options: { openai: { reasoningEffort: 'low', textVerbosity: 'low' } } },
   confidence_min: 0.75,
@@ -382,7 +382,7 @@ export const CREATIVE_HEAD_DEFAULTS: CreativeHeadConfig = {
   provider: 'openai',
   model_id: 'gpt-5.4-mini',
   byok: true,
-  byok_alias: 'karkhana-openai',
+  byok_alias: 'namaste-ji-openai',
   openai_api: 'responses', // required for reasoning_effort + tool-calling on gpt-5* models
   autonomy: 'proposes', // safe default; flip to 'autonomous' in KV when trusted
   planning_horizon_months: 3,
@@ -422,7 +422,7 @@ export interface GlobalStrategy {
   festivals: string[];
   /** ISO-3166-2 IN state codes (+ 'IN' for pan-India) we target. */
   regions: string[];
-  /** Languages we generate for (mirrors @karkhana/shared LANGS). */
+  /** Languages we generate for (mirrors @namaste-ji/shared LANGS). */
   languages: string[];
   audience_cohorts: string[];
   /** Approved, script-aware fonts the agent chooses from for any text overlay. */
@@ -525,7 +525,7 @@ export const HEIMDALL_DEFAULTS: HeimdallConfig = {
   provider: 'openai',
   model_id: 'gpt-5.4-mini', // models come from KV per env — this is the cheap local fallback
   byok: true,
-  byok_alias: 'karkhana-openai',
+  byok_alias: 'namaste-ji-openai',
   openai_api: 'responses',
   params: { provider_options: { openai: { reasoningEffort: 'low', textVerbosity: 'low' } } },
   models: { metric: HD_MODEL, judge: HD_MODEL },

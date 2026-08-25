@@ -9,8 +9,8 @@ export function loadEnv() {
   if (fs.existsSync(f)) for (const line of fs.readFileSync(f, 'utf8').split('\n')) {
     const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/); if (m && !(m[1] in process.env)) env[m[1]] = m[2].replace(/^["']|["']$/g, '');
   }
-  env.KARKHANA_NAME = (env.KARKHANA_NAME || 'karkhana').toLowerCase().replace(/[^a-z0-9-]/g, '-');
-  env.KARKHANA_STAGE = env.KARKHANA_STAGE || 'staging';
+  env.PROJECT_NAME = (env.PROJECT_NAME || 'my-app').toLowerCase().replace(/[^a-z0-9-]/g, '-');
+  env.PROJECT_STAGE = env.PROJECT_STAGE || 'staging';
   return env;
 }
 export const outputsFile = path.join(root, 'infra/.outputs.json');

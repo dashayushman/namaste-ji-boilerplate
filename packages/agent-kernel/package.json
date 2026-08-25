@@ -1,5 +1,5 @@
 {
-  "name": "@karkhana/agent-kernel",
+  "name": "@namaste-ji/agent-kernel",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
     "@ai-sdk/anthropic": "^3.0.0",
     "@ai-sdk/openai": "^3.0.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
-    "@karkhana/config": "*",
+    "@namaste-ji/config": "*",
     "ai": "^6.0.0"
   },
   "devDependencies": {

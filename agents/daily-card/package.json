@@ -11,8 +11,8 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "@karkhana/agent-kernel": "*",
-    "@karkhana/config": "*",
+    "@namaste-ji/agent-kernel": "*",
+    "@namaste-ji/config": "*",
     "ai": "^6.0.0",
     "hono": "^4.4.0"
   },

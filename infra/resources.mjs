@@ -1,5 +1,5 @@
-// ONE source of truth for what Karkhana provisions, consumed by alchemy.run.ts (real) and by
-// `bootstrap --dry-run` (the plan). Names are `${KARKHANA_NAME}-${thing}-${stage}`.
+// ONE source of truth for what Namaste Ji Boilerplate provisions, consumed by alchemy.run.ts (real) and by
+// `bootstrap --dry-run` (the plan). Names are `${PROJECT_NAME}-${thing}-${stage}`.
 export function resources(name, stage) {
   const n = (x) => `${name}-${x}-${stage}`;
   return [

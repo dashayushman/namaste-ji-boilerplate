@@ -1,4 +1,4 @@
-# Karkhana — Agent Kernel: the reusable agent anatomy
+# Namaste Ji — Agent Kernel: the reusable agent anatomy
 
 > **Status: design / brainstorm.** Nothing here is built yet. This is the agreed
 > *direction*, captured so decisions aren't lost. Treat it as living.

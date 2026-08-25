@@ -27,7 +27,7 @@ const EMPTY: McpConnection = { tools: {}, toolNames: [], close: async () => {} }
  */
 export async function connectMcp(url: string, opts: { clientName?: string } = {}): Promise<McpConnection> {
   try {
-    const client = new Client({ name: opts.clientName ?? 'karkhana-agent', version: '1.0.0' });
+    const client = new Client({ name: opts.clientName ?? 'namaste-ji-agent', version: '1.0.0' });
     await client.connect(new StreamableHTTPClientTransport(new URL(url)));
     const listed = await client.listTools();
 

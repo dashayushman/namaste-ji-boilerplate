@@ -13,4 +13,4 @@ jobs:
       - run: npm run check
       - name: bootstrap --dry-run (the plan, offline)
         run: npm run bootstrap -- --dry-run
-        env: { CLOUDFLARE_API_TOKEN: dry, CLOUDFLARE_ACCOUNT_ID: dry, ALCHEMY_PASSWORD: dry, KARKHANA_NAME: karkhana-ci }
+        env: { CLOUDFLARE_API_TOKEN: dry, CLOUDFLARE_ACCOUNT_ID: dry, ALCHEMY_PASSWORD: dry, PROJECT_NAME: namaste-ji-boilerplate-ci }

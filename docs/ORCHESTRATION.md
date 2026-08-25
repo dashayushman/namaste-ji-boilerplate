@@ -1,4 +1,4 @@
-# Karkhana — Multi-Agent Orchestration Design
+# Namaste Ji — Multi-Agent Orchestration Design
 
 > **Status: design / brainstorm.** Nothing here is built yet. This is the agreed
 > *direction* for how the Chief of Content & Product agent — and the agents it

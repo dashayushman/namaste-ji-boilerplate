@@ -2,7 +2,7 @@
 //   doctor → provision (Alchemy) → write wrangler config → migrate D1 → seed config KV → secrets →
 //   deploy staging → smoke → print URLs.
 // `--dry-run` prints the plan and touches nothing (no network). `--prod --i-know` is the only way
-// to target KARKHANA_STAGE=prod.
+// to target PROJECT_STAGE=prod.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync, spawnSync } from 'node:child_process';
@@ -12,8 +12,8 @@ import { resources } from '../infra/resources.mjs';
 const args = process.argv.slice(2);
 const dry = args.includes('--dry-run');
 const env = loadEnv();
-if (env.KARKHANA_STAGE === 'prod' && !(args.includes('--prod') && args.includes('--i-know'))) { missing('KARKHANA_STAGE=prod', 'run `npm run bootstrap -- --prod --i-know` on purpose (tasks/deploy-prod.md)'); process.exit(1); }
-const name = env.KARKHANA_NAME, stage = env.KARKHANA_STAGE;
+if (env.PROJECT_STAGE === 'prod' && !(args.includes('--prod') && args.includes('--i-know'))) { missing('PROJECT_STAGE=prod', 'run `npm run bootstrap -- --prod --i-know` on purpose (tasks/deploy-prod.md)'); process.exit(1); }
+const name = env.PROJECT_NAME, stage = env.PROJECT_STAGE;
 const sh = (cmd, opts = {}) => { console.log(`$ ${cmd}`); if (dry) return ''; return execSync(cmd, { stdio: opts.capture ? ['ignore', 'pipe', 'inherit'] : 'inherit', cwd: opts.cwd ?? root, env: { ...process.env, ...env }, encoding: 'utf8' }); };
 
 step(`doctor (${dry ? 'offline' : 'online'})`);

@@ -1,10 +1,10 @@
-# AGENTS.md — Karkhana (कारख़ाना · the workshop)
+# AGENTS.md — Namaste Ji Boilerplate (कारख़ाना · the workshop)
 
 > **You are probably a coding agent.** This file is the front door. Read it fully; it tells you
 > what this is, the one command that gets to a running app, how to verify, and where the runbooks
 > are. Humans: same file, same rules.
 
-Karkhana is a blank canvas for an **agent-operated app on Cloudflare** — the workshop Karkhana
+Namaste Ji Boilerplate is a blank canvas for an **agent-operated app on Cloudflare** — the workshop Namaste Ji
 ([namasteji.aiwithayushman.com/build/starter](https://namasteji.aiwithayushman.com/build/starter))
 was built in, generated from that monorepo and stripped to the reusable core. It ships:
 

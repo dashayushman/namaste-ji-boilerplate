@@ -5,7 +5,7 @@ import { languageSchema, temporalClassSchema } from './brief';
  * The consumer feed serving contract (docs/FRONTEND.md §4, DISTRIBUTION §4/§7).
  *
  * v1 is served by consumer-api's simple candidates+seeded-shuffle feed; the future
- * rank() spine (@karkhana/feed, FL-1) replaces ONLY the ordering step behind this
+ * rank() spine (@namaste-ji/feed, FL-1) replaces ONLY the ordering step behind this
  * same page shape — items are self-contained and the cursor is opaque, so the client
  * never changes.
  */

@@ -7,7 +7,7 @@ const need = (k, fix) => { if (env[k]) ok(`${k} set`); else { missing(`${k} is e
 need('CLOUDFLARE_API_TOKEN', 'create a scoped token (see .env.example) and put it in .env');
 need('CLOUDFLARE_ACCOUNT_ID', 'Cloudflare dashboard → Workers & Pages → Account ID → .env');
 need('ALCHEMY_PASSWORD', 'any strong string in .env (encrypts Alchemy state); keep it stable');
-if (!/^[a-z0-9-]{2,30}$/.test(env.KARKHANA_NAME)) { missing(`KARKHANA_NAME "${env.KARKHANA_NAME}" must be lowercase letters/digits/dashes`, 'set KARKHANA_NAME=my-app in .env'); bad++; } else ok(`KARKHANA_NAME=${env.KARKHANA_NAME} · stage=${env.KARKHANA_STAGE}`);
+if (!/^[a-z0-9-]{2,30}$/.test(env.PROJECT_NAME)) { missing(`PROJECT_NAME "${env.PROJECT_NAME}" must be lowercase letters/digits/dashes`, 'set PROJECT_NAME=my-app in .env'); bad++; } else ok(`PROJECT_NAME=${env.PROJECT_NAME} · stage=${env.PROJECT_STAGE}`);
 // token scopes (best-effort, online)
 if (env.CLOUDFLARE_API_TOKEN && !process.argv.includes('--offline')) {
   try {

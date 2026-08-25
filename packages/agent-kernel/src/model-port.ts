@@ -18,7 +18,7 @@
 import { createOpenAI } from '@ai-sdk/openai';
 import { createAnthropic } from '@ai-sdk/anthropic';
 import type { LanguageModel } from 'ai';
-import type { ResolvedModelConfig, LLMProvider, ModelRoleConfig, ModelParams } from '@karkhana/config';
+import type { ResolvedModelConfig, LLMProvider, ModelRoleConfig, ModelParams } from '@namaste-ji/config';
 
 /** AI SDK generation params (the subset of generateText/streamText options we map config to). */
 export interface GenerateParams {

@@ -5,6 +5,6 @@ const agent = process.argv[2]; const dir = path.join(root, 'agents', agent);
 const env = loadEnv();
 if (!fs.existsSync(path.join(dir, 'wrangler.jsonc'))) {
   const tpl = fs.readFileSync(path.join(dir, 'wrangler.template.jsonc'), 'utf8');
-  fs.writeFileSync(path.join(dir, 'wrangler.jsonc'), tpl.replaceAll('__NAME__', env.KARKHANA_NAME).replaceAll('__STAGE__', env.KARKHANA_STAGE));
+  fs.writeFileSync(path.join(dir, 'wrangler.jsonc'), tpl.replaceAll('__NAME__', env.PROJECT_NAME).replaceAll('__STAGE__', env.PROJECT_STAGE));
   console.log(`wrote ${agent}/wrangler.jsonc from the template (local env ready; staging ids filled by bootstrap)`);
 }

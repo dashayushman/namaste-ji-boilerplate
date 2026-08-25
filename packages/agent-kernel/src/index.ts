@@ -1,5 +1,5 @@
 /**
- * @karkhana/agent-kernel
+ * @namaste-ji/agent-kernel
  *
  * Reusable agent run-instrumentation (AGENT-KERNEL.md). Every agent records runs the same
  * way: a step-level timeline + token/tool accounting in its own D1, lifecycle events to the

@@ -1,4 +1,4 @@
-# Karkhana — Agent Platform: how we build & manage agents
+# Namaste Ji — Agent Platform: how we build & manage agents
 
 > **Status: design / brainstorm.** Nothing here is built yet. This is the agreed
 > *direction*, captured so decisions aren't lost. Treat it as living.
@@ -24,7 +24,7 @@ substrate.** Visual builders are kept only as throwaway *prototyping* sketchpads
 
 Why, specifically for this product:
 
-- **It contradicts the founding principle.** Karkhana is **agent-operated and built by
+- **It contradicts the founding principle.** Namaste Ji is **agent-operated and built by
   engineering agents + Claude Code** (ARCH §1). A drag-drop GUI is a **human-authoring**
   tool. We already **dropped n8n** for exactly this reason (D2): the operators are agents,
   not humans wiring boxes. A visual builder re-creates the n8n problem one layer up.

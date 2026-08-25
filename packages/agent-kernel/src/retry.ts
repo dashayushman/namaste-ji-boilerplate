@@ -8,7 +8,7 @@
  * STM rewrite) and is reused for agent-level calls (vision, playbook). Tunable via RetryConfig;
  * the AI SDK's own retry is disabled at the call site (maxRetries: 0) so this is the single owner.
  */
-import { type RetryConfig, DEFAULT_RETRY } from '@karkhana/config';
+import { type RetryConfig, DEFAULT_RETRY } from '@namaste-ji/config';
 
 export { type RetryConfig, DEFAULT_RETRY };
 

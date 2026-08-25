@@ -11,8 +11,8 @@
  */
 import { Hono } from 'hono';
 import { generateText } from 'ai';
-import { buildModel, resolveModelConfig, toGenerateParams, type ModelPortEnv } from '@karkhana/agent-kernel';
-import { createKVConfigStore, getConfig, GLOBAL_DEFAULTS, type GlobalConfig, type LLMProvider, type ModelParams } from '@karkhana/config';
+import { buildModel, resolveModelConfig, toGenerateParams, type ModelPortEnv } from '@namaste-ji/agent-kernel';
+import { createKVConfigStore, getConfig, GLOBAL_DEFAULTS, type GlobalConfig, type LLMProvider, type ModelParams } from '@namaste-ji/config';
 
 export interface Env extends ModelPortEnv {
   CARDS: D1Database;

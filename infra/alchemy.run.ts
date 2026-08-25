@@ -1,8 +1,8 @@
 /**
- * Karkhana — YOUR Cloudflare substrate as TypeScript (Alchemy). One stage per run, pinned.
+ * Namaste Ji Boilerplate — YOUR Cloudflare substrate as TypeScript (Alchemy). One stage per run, pinned.
  * Provisions the BACKING RESOURCES only; Workers are deployed by `wrangler deploy` (bootstrap).
  *
- * Safety: account and stage are pinned from .env (CLOUDFLARE_ACCOUNT_ID, KARKHANA_STAGE) so a stray
+ * Safety: account and stage are pinned from .env (CLOUDFLARE_ACCOUNT_ID, PROJECT_STAGE) so a stray
  * `--stage` can never point Alchemy at another environment's resources and destroy them.
  */
 import fs from 'node:fs';
@@ -10,8 +10,8 @@ import alchemy from 'alchemy';
 import { D1Database, KVNamespace, R2Bucket, Queue, AiGateway } from 'alchemy/cloudflare';
 import { resources } from './resources.mjs';
 
-const name = (process.env.KARKHANA_NAME ?? 'karkhana').toLowerCase();
-const stage = process.env.KARKHANA_STAGE ?? 'staging';
+const name = (process.env.PROJECT_NAME ?? 'my-app').toLowerCase();
+const stage = process.env.PROJECT_STAGE ?? 'staging';
 if (!process.env.CLOUDFLARE_ACCOUNT_ID) throw new Error('CLOUDFLARE_ACCOUNT_ID is required (pin it in .env) — refusing to guess an account');
 if (!process.env.ALCHEMY_PASSWORD) throw new Error('ALCHEMY_PASSWORD is required (.env) — it encrypts Alchemy state');
 
