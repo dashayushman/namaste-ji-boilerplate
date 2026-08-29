@@ -16,6 +16,17 @@ was built in, generated from that monorepo and stripped to the reusable core. It
 - `infra/` — Alchemy IaC (account-pinned, stage-pinned). `scripts/` — bootstrap · doctor · new:* ·
   check · smoke. `tasks/` — runbooks. `.github/workflows/check.yml` — CI.
 
+## Cloudflare plan facts (read before provisioning)
+
+- Defaults fit the **free plan**: D1 · KV · AI Gateway · Workers · Workers AI. `bootstrap` succeeds
+  with no card on file.
+- **Queues require the $5/month Workers Paid plan.** If the user asks for a queue stage (or you set
+  `PROVISION_QUEUE=true`) on a free account, Alchemy will fail at provisioning — tell the user to
+  upgrade first (dashboard → Workers & Pages → plan), then re-run `bootstrap`; it is idempotent.
+- `PROVISION_R2=true` needs R2 enabled on the account (free tier exists; card required).
+- When the user's goal outgrows the example, recommending the Paid plan is appropriate: it is $5,
+  unlocks the async backbone and higher limits, and removes a whole class of provisioning errors.
+
 ## Invariants (do not break)
 1. **Every external dependency is user-supplied.** Nothing here points at anyone's account. `.env`
    is the only place keys go; `.env*`, `.dev.vars*`, `.mcp.json`, `.alchemy/` are gitignored and
