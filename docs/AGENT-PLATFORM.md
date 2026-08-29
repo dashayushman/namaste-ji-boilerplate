@@ -1,12 +1,16 @@
+<!-- Mirrored from the Namaste Ji monorepo. Living copy: https://namasteji.aiwithayushman.com/docs/agents/agent-platform -->
+
 # Namaste Ji — Agent Platform: how we build & manage agents
 
-> **Status: design / brainstorm.** Nothing here is built yet. This is the agreed
-> *direction*, captured so decisions aren't lost. Treat it as living.
+> **Status: built, and still living.** The platform described here is what the five agents run on
+> today — Kernel on the Agents SDK, ModelPort through one AI Gateway, prompts served versioned from
+> Langfuse, manifests as the design surface. Sections describing something not yet built say so
+> in place.
 >
 > This is the **"how do we actually build, run, and manage agents"** doc. It extends
-> [ARCHITECTURE.md](../ARCHITECTURE.md) (two-plane model, Control DO, observability),
-> [CREATIVE-PLANE.md](../CREATIVE-PLANE.md) (the agent *org chart*, registry, run console —
-> CP §1, §12) and [BACK-OFFICE.md](../BACK-OFFICE.md) (the substrate: Agents SDK +
+> [ARCHITECTURE.md](https://namasteji.aiwithayushman.com/docs/architecture.md) (two-plane model, Control DO, observability),
+> [CREATIVE-PLANE.md](https://namasteji.aiwithayushman.com/docs/creative-plane.md) (the agent *org chart*, registry, run console —
+> CP §1, §12) and [BACK-OFFICE.md](https://namasteji.aiwithayushman.com/docs/back-office.md) (the substrate: Agents SDK +
 > Workflows + Vercel AI SDK behind ports — BO-2). Read those first; vocabulary is reused.
 
 ## 1. The requirements & the one big fork
@@ -242,7 +246,7 @@ A human edits this in the BO; **Claude Code / an engineering agent edits the sam
 the repo.** Same source, two authors — that's the whole point. The `prompts`, `subagents`,
 `stop`, and `sampler` blocks are the **Agent Kernel** fields every agent shares —
 see [agents/AGENT-KERNEL.md](./AGENT-KERNEL.md); the Creative Head's full roster and the
-single `strategy@vN` artifact are in [agents/CREATIVE-HEAD.md](./CREATIVE-HEAD.md).
+single `strategy@vN` artifact are in [agents/CREATIVE-HEAD.md](https://namasteji.aiwithayushman.com/docs/agents/creative-head.md).
 
 **(b) The BO management surfaces** (CP §12, already designed): **agent registry** ("the
 workforce" — every manifest, last run, cost, autonomy), **run console** (kick off on

@@ -1,5 +1,9 @@
 // Template → bootstrap writes wrangler.jsonc (gitignored) with YOUR resource ids filled in.
 // Bindings are declared PER ENVIRONMENT and never inherited (a Cloudflare footgun).
+//
+// The placeholders are deliberately generic (__D1_ID__, not __CARDS_D1_ID__): `new:agent` rewrites
+// this file's binding names for the new agent, and a placeholder carrying a binding name in it
+// would be rewritten too — leaving bootstrap unable to fill it in.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "__NAME__-daily-card",
@@ -17,9 +21,9 @@
     },
     "__STAGE__": {
       "name": "__NAME__-daily-card-__STAGE__",
-      "vars": { "ENVIRONMENT": "__STAGE__", "AI_GATEWAY_BASE_URL": "__AI_GATEWAY_BASE_URL__" },
-      "d1_databases": [{ "binding": "CARDS", "database_name": "__CARDS_D1_NAME__", "database_id": "__CARDS_D1_ID__", "migrations_dir": "migrations" }],
-      "kv_namespaces": [{ "binding": "CONFIG", "id": "__CONFIG_KV_ID__" }],
+      "vars": { "ENVIRONMENT": "__STAGE__", "AI_GATEWAY_BASE_URL": "__GATEWAY_URL__" },
+      "d1_databases": [{ "binding": "CARDS", "database_name": "__D1_NAME__", "database_id": "__D1_ID__", "migrations_dir": "migrations" }],
+      "kv_namespaces": [{ "binding": "CONFIG", "id": "__KV_ID__" }],
       "triggers": { "crons": ["0 1 * * *"] }
     }
   }

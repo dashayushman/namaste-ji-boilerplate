@@ -1,3 +1,5 @@
+<!-- Mirrored from the Namaste Ji monorepo. Living copy: https://namasteji.aiwithayushman.com/docs/agents/agent-kernel-runtime -->
+
 # Agent Kernel — Runtime (implementation contract / playbook)
 
 > Design rationale: [AGENT-KERNEL.md](AGENT-KERNEL.md) and [ORCHESTRATION.md](ORCHESTRATION.md).

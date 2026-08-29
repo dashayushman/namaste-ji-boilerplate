@@ -1,13 +1,17 @@
+<!-- Mirrored from the Namaste Ji monorepo. Living copy: https://namasteji.aiwithayushman.com/docs/agents/agent-kernel -->
+
 # Namaste Ji — Agent Kernel: the reusable agent anatomy
 
-> **Status: design / brainstorm.** Nothing here is built yet. This is the agreed
-> *direction*, captured so decisions aren't lost. Treat it as living.
+> **Status: shipped, and still living.** The Kernel is built and every agent in the system runs
+> on it (`packages/agent-kernel`); it is also the core of the public
+> [Namaste Ji Boilerplate](https://github.com/dashayushman/namaste-ji-boilerplate). Where this doc
+> describes something not yet built, it says so in place.
 >
 > This is the **base pattern every agent in the system is an instance of** — orchestrator
 > or subagent, online or offline. It concretizes the single-agent anatomy sketched in
 > [AGENT-PLATFORM.md](./AGENT-PLATFORM.md) (manifest, `ModelPort`, `MemoryPort`, reflection)
 > and is the unit that [ORCHESTRATION.md](./ORCHESTRATION.md) composes into a topology. The
-> first and reference instance is the [Creative Head](./CREATIVE-HEAD.md). Read those for
+> first and reference instance is the [Creative Head](https://namasteji.aiwithayushman.com/docs/agents/creative-head.md). Read those for
 > the *platform* and the *topology*; this is the *cell*.
 
 ## 1. What the kernel is
@@ -232,6 +236,6 @@ discipline that makes it safe:
 |---|---|
 | [AGENT-PLATFORM.md](./AGENT-PLATFORM.md) | The platform (substrate, ports, manifest schema). The Kernel is its anatomy made concrete and reusable. |
 | [ORCHESTRATION.md](./ORCHESTRATION.md) | The topology: how Kernel instances (orchestrator + subagents, online + offline) compose. |
-| [CREATIVE-HEAD.md](./CREATIVE-HEAD.md) | The first and reference Kernel instance. |
-| [ARCHITECTURE.md](../ARCHITECTURE.md) | Control DO, two-plane model, observability the Kernel plugs into. |
-| [BACK-OFFICE.md](../BACK-OFFICE.md) | The BO surfaces that render the manifest + observability stream. |
+| [CREATIVE-HEAD.md](https://namasteji.aiwithayushman.com/docs/agents/creative-head.md) | The first and reference Kernel instance. |
+| [ARCHITECTURE.md](https://namasteji.aiwithayushman.com/docs/architecture.md) | Control DO, two-plane model, observability the Kernel plugs into. |
+| [BACK-OFFICE.md](https://namasteji.aiwithayushman.com/docs/back-office.md) | The BO surfaces that render the manifest + observability stream. |

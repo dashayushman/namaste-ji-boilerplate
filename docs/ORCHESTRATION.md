@@ -1,8 +1,10 @@
+<!-- Mirrored from the Namaste Ji monorepo. Living copy: https://namasteji.aiwithayushman.com/docs/agents/orchestration -->
+
 # Namaste Ji — Multi-Agent Orchestration Design
 
-> **Status: design / brainstorm.** Nothing here is built yet. This is the agreed
-> *direction* for how the Chief of Content & Product agent — and the agents it
-> commands — are structured as a multi-agent system. Read
+> **Status: partly built, and still living.** The topology here — subagents-as-tools behind a
+> context firewall, the online/offline split, the three-tier memory split — is what the shipped
+> agents follow; the Chief orchestrator itself is not built yet. Read
 > [AGENT-PLATFORM.md](./AGENT-PLATFORM.md) first for the single-agent anatomy
 > (manifest, MemoryPort, ModelPort, reflection loop). This document is the
 > **topology layer above that**: how agents relate to each other, the two-plane
@@ -301,10 +303,10 @@ their own Control DO modes. Don't treat offline as "just a cron job."
 | Doc | Relationship |
 |---|---|
 | [AGENT-PLATFORM.md](./AGENT-PLATFORM.md) | Single-agent anatomy — manifest, MemoryPort, ModelPort, reflection loop. This doc is the topology layer above it. Every agent in this doc is built on that foundation. |
-| [CREATIVE-PLANE.md](../CREATIVE-PLANE.md) | The brief contract, content lifecycle, eval/Judge, ingest. The Commission subagent delegates into that plane. |
-| [ARCHITECTURE.md](../ARCHITECTURE.md) | Two-plane design, Control DO policy engine, observability. This doc instantiates those abstractions for the Chief + its subagents. |
-| [BACK-OFFICE.md](../BACK-OFFICE.md) | The substrate (Agents SDK + Workflows) and the BO management surfaces. All agents here run on that substrate and are managed through those surfaces. |
-| [DISTRIBUTION.md](../DISTRIBUTION.md) | The Catalog View's performance rollups feed from the distribution signal (share-intent, novelty/rarity). |
+| [CREATIVE-PLANE.md](https://namasteji.aiwithayushman.com/docs/creative-plane.md) | The brief contract, content lifecycle, eval/Judge, ingest. The Commission subagent delegates into that plane. |
+| [ARCHITECTURE.md](https://namasteji.aiwithayushman.com/docs/architecture.md) | Two-plane design, Control DO policy engine, observability. This doc instantiates those abstractions for the Chief + its subagents. |
+| [BACK-OFFICE.md](https://namasteji.aiwithayushman.com/docs/back-office.md) | The substrate (Agents SDK + Workflows) and the BO management surfaces. All agents here run on that substrate and are managed through those surfaces. |
+| [DISTRIBUTION.md](https://namasteji.aiwithayushman.com/docs/distribution.md) | The Catalog View's performance rollups feed from the distribution signal (share-intent, novelty/rarity). |
 
 ---
 

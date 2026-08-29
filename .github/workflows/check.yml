@@ -1,6 +1,8 @@
 name: check
-# Proves the kit without owning any cloud account: typecheck + tests + secret scan + the bootstrap
-# plan (dry run, no network). The first real cloud bootstrap is always run by YOU on YOUR account.
+# Proves the kit without owning any cloud account: typecheck + tests + secret scan, then the SECOND
+# half of the promise (scaffold an agent and stay green — the half that used to be broken), then
+# the bootstrap plan (dry run, no network). The first real cloud bootstrap is always run by YOU on
+# YOUR account.
 on: { push: { branches: [main] }, pull_request: {} }
 jobs:
   check:
@@ -11,6 +13,13 @@ jobs:
         with: { node-version: 22, cache: npm }
       - run: npm ci
       - run: npm run check
-      - name: bootstrap --dry-run (the plan, offline)
-        run: npm run bootstrap -- --dry-run
+      - name: new:agent, then check again (a scaffolded agent must not break the build)
+        run: |
+          npm run new:agent ci-probe
+          npm run check
+      - name: bootstrap --dry-run (the plan, offline — must list BOTH agents)
+        run: |
+          npm run bootstrap -- --dry-run | tee plan.txt
+          grep -q 'daily-card' plan.txt
+          grep -q 'ci-probe'   plan.txt
         env: { CLOUDFLARE_API_TOKEN: dry, CLOUDFLARE_ACCOUNT_ID: dry, ALCHEMY_PASSWORD: dry, PROJECT_NAME: namaste-ji-boilerplate-ci }

@@ -1,4 +1,4 @@
-# Namaste Ji Boilerplate · कारख़ाना
+# Namaste Ji Boilerplate
 
 **An agent-operated app on Cloudflare — a workshop built for coding agents.**
 
@@ -16,12 +16,15 @@ npm run new:agent greeting-writer
 Start at **[AGENTS.md](./AGENTS.md)** — it is written for agents first (humans second) and is the contract.
 
 Namaste Ji Boilerplate is generated from the [Namaste Ji](https://namasteji.aiwithayushman.com) monorepo (an
-allow-listed export — the Agent Kernel, the config loader, the contracts, RBAC, the IaC, CI, and a tiny
-example pipeline) by the founder, [Ayushman Dash](https://aiwithayushman.com). Read how the real thing is
+allow-listed export — the Agent Kernel, the config loader, the IaC, CI, and a tiny example
+pipeline) by the founder, [Ayushman Dash](https://aiwithayushman.com). Read how the real thing is
 built at [namasteji.aiwithayushman.com/build](https://namasteji.aiwithayushman.com/build).
 
 **Status: v0.** The kernel, config, infra, bootstrap/doctor/check/smoke, the `daily-card` example and
-`new:agent` work; the console shell, `new:consumer`/`new:page`/`new:port` and the weekly cloud e2e are
-next. No account is owned by this kit; CI proves `check` + `bootstrap --dry-run` without one.
+`new:agent` work — including deploying an agent that `new:agent` created, which is the second half of
+the promise above. The console shell, `new:consumer`/`new:page`/`new:port` and a weekly cloud
+end-to-end are next. No account is owned by this kit; CI proves `check` + `bootstrap --dry-run`
+without one. R2 and Queues are opt-in, so a **free** Cloudflare plan is enough to get through
+`bootstrap`.
 
 MIT © Ayushman Dash
