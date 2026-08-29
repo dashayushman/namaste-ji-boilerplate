@@ -5,6 +5,6 @@
   "type": "module",
   "description": "Alchemy IaC — provisions YOUR Cloudflare substrate for one stage (account- and stage-pinned).",
   "scripts": { "deploy": "alchemy deploy", "destroy": "alchemy destroy", "typecheck": "tsc --noEmit" },
-  "dependencies": { "alchemy": "^0.93.12" },
+  "dependencies": { "alchemy": "^2.0.0-beta.74" },
   "devDependencies": { "@cloudflare/workers-types": "^4.20240529.0", "@types/node": "^20.19.43", "typescript": "^5.4.5" }
 }

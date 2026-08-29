@@ -18,5 +18,5 @@
   "engines": { "node": ">=20" },
   "dependencies": { "ai": "^6.0.0" },
   "overrides": { "ai": "^6.0.0" },
-  "devDependencies": { "wrangler": "^4.0.0", "typescript": "^5.4.5" }
+  "devDependencies": { "wrangler": "^4.127.1", "typescript": "^5.4.5" }
 }
