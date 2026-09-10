@@ -14,7 +14,7 @@
     "@namaste-ji/agent-kernel": "*",
     "@namaste-ji/config": "*",
     "ai": "^6.0.0",
-    "hono": "^4.4.0"
+    "hono": "^4.13.7"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240529.0",
